@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Decanlys | Supplier price files for distributors</title>
-  <meta name="description" content="Forward a supplier's price file. Within two business days you get a file ready to load, a short list of items that need your decision, and a report on cost increases you have not passed on. Connor, AI engineer, West Hartford, CT.">
-  <meta property="og:title" content="Decanlys | Supplier price files for distributors">
-  <meta property="og:description" content="Every supplier price increase, in your system within two business days. Built and run by an AI engineer.">
+  <title>Decanlys | Connor, AI consulting, West Hartford, CT</title>
+  <meta name="description" content="Connor helps organizations adopt AI their people trust, and builds AI systems that do slow, error-prone work. Current focus: supplier price files for distributors. Based in West Hartford, CT.">
+  <meta property="og:title" content="Decanlys | Connor, AI consulting">
+  <meta property="og:description" content="AI adoption people trust, and AI systems that do slow, error-prone work. Current focus: supplier price files for distributors.">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -345,7 +345,6 @@
     .hero-content .section-label { animation-delay: 0.1s; }
     .hero-content h1 { animation-delay: 0.22s; }
     .hero-content .hero-sub { animation-delay: 0.34s; }
-    .hero-content .btn { animation-delay: 0.46s; }
     .hero-content .trust-line { animation-delay: 0.58s; }
 
     @keyframes heroFadeUp {
@@ -368,6 +367,39 @@
       max-width: 660px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: heroFadeUp 0.7s ease 0.46s forwards;
+    }
+
+    .cta-block {
+      max-width: 680px;
+      margin: 72px auto 0;
+      padding-top: 56px;
+      border-top: 1px solid var(--lavender);
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .cta-block p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 32px;
+    }
+    .cta-block .contact-email,
+    .cta-block .contact-capacity {
+      margin-bottom: 0;
     }
 
     .trust-line {
@@ -546,10 +578,147 @@
     }
 
     /* ──────────────────────────────────────────
+       Journey (The Playbook)
+       ────────────────────────────────────────── */
+    .journey {
+      padding: 100px 0;
+    }
+
+    .journey-stages {
+      max-width: 720px;
+      margin: 0 auto;
+      padding-left: 80px;
+      position: relative;
+    }
+
+    /* Vertical connecting line */
+    .journey-stages::before {
+      content: '';
+      position: absolute;
+      left: 111px;
+      top: 48px;
+      bottom: 48px;
+      width: 3px;
+      background: var(--lavender);
+      border-radius: 2px;
+    }
+
+    .journey-arc-label {
+      font-size: 14px;
+      font-style: italic;
+      color: var(--muted);
+      padding-left: 52px;
+      margin-bottom: 24px;
+    }
+
+    .journey-arc-label:last-of-type {
+      margin-bottom: 0;
+      margin-top: 24px;
+    }
+
+    .journey-stage {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      padding-bottom: 40px;
+      position: relative;
+    }
+
+    .journey-stage:last-of-type {
+      padding-bottom: 0;
+    }
+
+    .stage-node {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--lavender);
+      border: 2.5px solid var(--deep-purple);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--deep-purple);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .stage-content h3 {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+      padding-top: 4px;
+    }
+
+    .stage-content p {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.65;
+      max-width: 560px;
+    }
+
+    .journey-bottom {
+      max-width: 720px;
+      margin: 48px auto 0;
+      text-align: center;
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .journey-bottom a {
+      color: var(--deep-purple);
+      font-weight: 500;
+      transition: color 200ms ease;
+    }
+
+    .journey-bottom a:hover {
+      color: var(--purple);
+    }
+
+    .journey-capabilities {
+      margin: 56px auto 0;
+      padding-top: 48px;
+      border-top: 1px solid var(--lavender);
+      max-width: 900px;
+    }
+
+    .journey-capabilities-heading {
+      font-size: 14px;
+      font-style: italic;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .capability-item h4 {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .capability-item p {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+
+    /* ──────────────────────────────────────────
        About
        ────────────────────────────────────────── */
     .about {
-      background: var(--white);
+      background: var(--section-bg);
       padding: 100px 0;
     }
 
@@ -605,7 +774,7 @@
        ────────────────────────────────────────── */
     .contact {
       padding: 120px 0;
-      background: var(--section-bg);
+      background: var(--white);
       text-align: center;
       position: relative;
     }
@@ -784,8 +953,62 @@
         font-size: 28px;
       }
 
-      .band, .about, .contact {
+      .band, .journey, .about, .contact {
         padding: 72px 0;
+      }
+
+      .journey-stages {
+        padding-left: 56px;
+      }
+
+      .journey-stages::before {
+        left: 79px;
+        top: 36px;
+        bottom: 36px;
+      }
+
+      .stage-node {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+      }
+
+      .journey-stage {
+        gap: 16px;
+        padding-bottom: 32px;
+      }
+
+      .stage-content h3 {
+        font-size: 19px;
+        padding-top: 2px;
+      }
+
+      .stage-content p {
+        font-size: 15px;
+      }
+
+      .journey-arc-label {
+        padding-left: 36px;
+        margin-bottom: 16px;
+      }
+
+      .journey-arc-label:last-of-type {
+        margin-top: 16px;
+      }
+
+      .journey-bottom {
+        font-size: 15px;
+        margin-top: 36px;
+      }
+
+      .journey-capabilities {
+        margin-top: 40px;
+        padding-top: 36px;
+      }
+
+      .capabilities-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
       }
 
       .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
@@ -844,7 +1067,7 @@
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
       }
-      .hero-content > * {
+      .hero-content > *, .hero-actions {
         opacity: 1;
         transform: none;
       }
@@ -882,11 +1105,11 @@
 
       <div class="nav-right">
         <ul class="nav-links">
-          <li><a href="#how">How it works</a></li>
-          <li><a href="#sample">Sample</a></li>
+          <li><a href="#price-files">Price files</a></li>
+          <li><a href="#playbook">Playbook</a></li>
           <li><a href="#about">About</a></li>
         </ul>
-        <a href="#contact" class="btn btn-nav">Free report</a>
+        <a href="#contact" class="btn btn-nav">Book a Call</a>
       </div>
 
       <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -897,10 +1120,10 @@
     </div>
 
     <ul class="nav-mobile" aria-hidden="true">
-      <li><a href="#how">How it works</a></li>
-      <li><a href="#sample">Sample</a></li>
+      <li><a href="#price-files">Price files</a></li>
+      <li><a href="#playbook">Playbook</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#contact" class="btn">Free report</a></li>
+      <li><a href="#contact" class="btn">Book a Call</a></li>
     </ul>
   </nav>
 
@@ -938,19 +1161,27 @@
       </svg>
 
       <div class="hero-content">
-        <span class="section-label">Supplier price files for distributors</span>
-        <h1>Every supplier price increase, in your system within two business days.</h1>
-        <p class="hero-sub">Forward me a supplier's price file. You get back a file ready to load, a short list of items that need your decision, and a one-page report on what old costs are costing you.</p>
-        <a href="#contact" class="btn">Get a free report</a>
-        <p class="trust-line">Built and run by an AI engineer in West Hartford, CT</p>
+        <span class="section-label">AI Consulting</span>
+        <h1>Your business runs on people. I help them work smarter.</h1>
+        <p class="hero-sub">I help organizations adopt AI in a way their people trust, and I build AI systems that do slow, error-prone work. My current focus is supplier price files for distributors.</p>
+        <div class="hero-actions">
+          <a href="#price-files" class="btn">See the price file service</a>
+          <a href="#contact" class="btn btn-outline">Let's Talk</a>
+        </div>
+        <p class="trust-line">Based in West Hartford, CT</p>
       </div>
     </section>
 
-    <!-- ─── The problem ─── -->
-    <section class="band band-alt" id="problem">
+    <!-- ─── Current focus: price files ─── -->
+    <section id="price-files">
+
+    <div class="band band-alt">
       <div class="container">
-        <span class="section-label reveal">The problem</span>
-        <h2 class="section-heading reveal">You pay the new cost before your system knows it.</h2>
+        <span class="section-label reveal">Current focus: price files for distributors</span>
+        <h2 class="section-heading reveal">Every supplier price increase, in your system within two business days.</h2>
+        <p class="section-intro reveal">Forward me a supplier's price file. You get back a file ready to load, a short list of items that need your decision, and a one-page report on what old costs are costing you.</p>
+
+        <h3 class="sub-heading reveal" style="margin-top:0">You pay the new cost before your system knows it.</h3>
         <p class="section-intro reveal">Suppliers send price increases as PDFs and spreadsheets, often more than once a year. Someone has to match every part number and key every new cost. Until that is done, your invoices carry the new cost while your quotes and margin reports use the old one.</p>
 
         <div class="grid grid-3">
@@ -968,10 +1199,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- ─── How it works ─── -->
-    <section class="band" id="how">
+    <div class="band" id="how">
       <div class="container">
         <span class="section-label reveal">How it works</span>
         <h2 class="section-heading reveal">You forward one email. I handle the rest.</h2>
@@ -1000,10 +1231,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- ─── What you get ─── -->
-    <section class="band band-alt" id="offer">
+    <div class="band band-alt" id="offer">
       <div class="container">
         <span class="section-label reveal">What you get</span>
         <h2 class="section-heading reveal">More than a loaded file.</h2>
@@ -1056,10 +1287,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- ─── Sample ─── -->
-    <section class="band" id="sample">
+    <div class="band" id="sample">
       <div class="container">
         <span class="section-label reveal">Sample report</span>
         <h2 class="section-heading reveal">See it run on a real price file.</h2>
@@ -1091,10 +1322,10 @@
           <a href="samples/decanlys-sample-price-file-workbook.xlsx" class="btn btn-outline">Workbook (Excel)</a>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- ─── Your data ─── -->
-    <section class="band band-alt" id="data">
+    <div class="band band-alt" id="data">
       <div class="container">
         <span class="section-label reveal">Your data</span>
         <h2 class="section-heading reveal">Your files stay yours.</h2>
@@ -1105,25 +1336,122 @@
           <li>I never log in to your ERP. You load the file yourself.</li>
           <li>I delete your files when you ask, and when our work ends.</li>
         </ul>
+
+        <div class="cta-block reveal">
+          <h3>Get a free Missed Increase Report.</h3>
+          <p>Send one supplier's price file and your item export for that supplier: part number, cost and units sold in the last 90 days. Within two business days you get the owner report and the workbook. No cost, no obligation.</p>
+          <a href="mailto:info@decanlys.com?subject=Missed%20Increase%20Report" class="btn">Request a free report</a>
+          <p class="contact-email">Need an NDA first? Send it to <a href="mailto:info@decanlys.com">info@decanlys.com</a> and I'll sign it.</p>
+          <p class="contact-capacity">I take six distributors, and only one per product line in each metro area.</p>
+        </div>
+      </div>
+    </div>
+
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+      <svg viewBox="0 0 84 28" width="84" height="28" fill="none">
+        <line x1="12" y1="18" x2="42" y2="8" stroke="#e1d5e7" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="42" y1="8" x2="72" y2="18" stroke="#e1d5e7" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="12" y1="18" x2="72" y2="18" stroke="#e1d5e7" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="12" cy="18" r="5" fill="#e1d5e7" stroke="#7E6090" stroke-width="1.5"/>
+        <circle cx="42" cy="8" r="5" fill="#e1d5e7" stroke="#7E6090" stroke-width="1.5"/>
+        <circle cx="72" cy="18" r="5" fill="#e1d5e7" stroke="#7E6090" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <!-- ─── The Playbook ─── -->
+    <section class="journey" id="playbook">
+      <div class="container">
+        <span class="section-label reveal">The Playbook</span>
+        <h2 class="section-heading reveal">From AI-unsure to AI-native.</h2>
+        <p class="section-intro reveal">Many organizations don't have an AI problem — they have an awareness problem. I guide your team through a proven framework that respects their expertise while embedding AI into how they work. No hype. No mandates. Just a clear path from skepticism to competence.</p>
+
+        <div class="journey-stages">
+          <p class="journey-arc-label reveal">AI-Unsure</p>
+
+          <div class="journey-stage reveal reveal-delay-1">
+            <div class="stage-node" aria-hidden="true">1</div>
+            <div class="stage-content">
+              <h3>Understand</h3>
+              <p>Before introducing any tools, I learn how your business actually works: where time gets wasted, what frustrates people, and where the real opportunities are. I map workflows, not feature lists.</p>
+            </div>
+          </div>
+
+          <div class="journey-stage reveal reveal-delay-2">
+            <div class="stage-node" aria-hidden="true">2</div>
+            <div class="stage-content">
+              <h3>Introduce</h3>
+              <p>The first move is an invitation. Your team tries AI on one low-risk task. I listen to what they're actually concerned about and build from there.</p>
+            </div>
+          </div>
+
+          <div class="journey-stage reveal reveal-delay-3">
+            <div class="stage-node" aria-hidden="true">3</div>
+            <div class="stage-content">
+              <h3>Activate</h3>
+              <p>Peer champions, people your team already respects, lead the way. Real use cases address real frustrations. A proof-of-concept team shows results everyone can see.</p>
+            </div>
+          </div>
+
+          <div class="journey-stage reveal">
+            <div class="stage-node" aria-hidden="true">4</div>
+            <div class="stage-content">
+              <h3>Scale</h3>
+              <p>From individual adoption to organizational standard. Shared knowledge bases, approved workflows, and training materials built by your own people. Measured by outcomes, not usage numbers.</p>
+            </div>
+          </div>
+
+          <div class="journey-stage reveal">
+            <div class="stage-node" aria-hidden="true">5</div>
+            <div class="stage-content">
+              <h3>Sustain</h3>
+              <p>AI becomes how your organization works, not a side tool. Integrated into onboarding, embedded in operations, continuously evolving. When the champion program isn't needed anymore — you're done.</p>
+            </div>
+          </div>
+
+          <p class="journey-arc-label reveal">AI-Native</p>
+        </div>
+
+        <div class="journey-capabilities reveal">
+          <p class="journey-capabilities-heading">What gets built along the way</p>
+          <div class="capabilities-grid">
+            <div class="capability-item">
+              <h4>Workflow Automation</h4>
+              <p>I find the manual, repetitive tasks eating your team's time, like data entry, document handling, and report generation — and build AI-powered systems that handle them.</p>
+            </div>
+            <div class="capability-item">
+              <h4>Document Intelligence</h4>
+              <p>Paper forms, PDFs, scattered files — I make them searchable and useful. Your team finds what they need in seconds, and AI extracts the data that matters.</p>
+            </div>
+            <div class="capability-item">
+              <h4>Custom AI Tools</h4>
+              <p>Chatbots, internal dashboards, smart assistants — whatever your business needs, I design and build it. Nothing more than you need.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="journey-bottom reveal">Every engagement is tailored to your organization's size, culture, and pace — from a 4-week sprint with a small team to a 6-month transformation. <a href="#contact">Have a different challenge? I'd love to hear about it &rarr;</a></p>
       </div>
     </section>
+
 
     <!-- ─── About ─── -->
     <section class="about" id="about">
       <div class="container">
         <span class="section-label reveal">Who I Am</span>
-        <h2 class="section-heading reveal">An AI engineer who builds systems that do the work.</h2>
+        <h2 class="section-heading reveal">People first. Technology second.</h2>
 
         <div class="about-content reveal">
           <div class="about-photo">
             <img src="Connor.jpg" alt="Connor, founder of Decanlys" class="photo-headshot" width="200" height="200">
-            <p class="photo-caption">Connor, Founder, Decanlys</p>
+            <p class="photo-caption">Connor — Founder, Decanlys</p>
           </div>
           <div class="about-text">
-            <p>I'm Connor, the founder of Decanlys. I build AI systems that read documents, match records and flag the cases a person needs to decide.</p>
-            <p>My background is in data science and AI engineering, and I've spent years leading AI adoption for large organizations.</p>
-            <p>I built the price file desk because supplier price files are slow, error-prone work that a well-built AI system can do in minutes, with a person checking every exception. That person is me.</p>
-            <p>Do you have another process that runs on documents? I build custom AI tools too. <a href="mailto:info@decanlys.com?subject=Custom%20AI%20tool">Tell me about it.</a></p>
+            <p>I'm Connor, the founder of Decanlys. I built this consultancy on a simple idea: AI should work for people, not the other way around.</p>
+            <p>My background is in data science and AI engineering, and I've spent years leading AI adoption for large organizations. But the work I care most about is helping businesses understand what AI can actually do for them — without the jargon, without the hype, and without the pressure to adopt technology for its own sake.</p>
+            <p>My current focus is one problem: supplier price files for distributors. It is slow, error-prone work that a well-built AI system can do in minutes, with a person checking every exception. <a href="#price-files">See how it works.</a></p>
+            <p>I believe the best technology is the kind you barely notice because it just works. That's what I build.</p>
           </div>
         </div>
       </div>
@@ -1144,13 +1472,12 @@
           <circle cx="50" cy="26" r="6" fill="#e1d5e7" stroke="#7E6090" stroke-width="1.5"/>
           <circle cx="30" cy="44" r="6" fill="#e1d5e7" stroke="#7E6090" stroke-width="1.5"/>
         </svg>
-        <h2 class="section-heading reveal">Get a free Missed Increase Report.</h2>
-        <p class="contact-sub reveal">Send one supplier's price file and your item export for that supplier: part number, cost and units sold in the last 90 days. Within two business days you get the owner report and the workbook. No cost, no obligation.</p>
+        <h2 class="section-heading reveal">Ready to see what AI can do for your business?</h2>
+        <p class="contact-sub reveal">No pressure. Just a 30-minute conversation about your business and where AI might help.</p>
         <div class="reveal">
-          <a href="mailto:info@decanlys.com?subject=Missed%20Increase%20Report" class="btn">Request a free report</a>
-          <p class="contact-email">Need an NDA first? Send it to <a href="mailto:info@decanlys.com">info@decanlys.com</a> and I'll sign it.</p>
+          <a href="mailto:info@decanlys.com?subject=Discovery%20Call%20Request" class="btn">Request a Discovery Call</a>
+          <p class="contact-email">Or reach out directly at <a href="mailto:info@decanlys.com">info@decanlys.com</a></p>
         </div>
-        <p class="contact-capacity reveal">I take six distributors, and only one per product line in each metro area. Start by December 1 and your January 1 increases load before the new year.</p>
       </div>
     </section>
 
