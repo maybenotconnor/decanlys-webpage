@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Decanlys | Connor, AI consulting, West Hartford, CT</title>
-  <meta name="description" content="Connor helps organizations adopt AI their people trust, and builds AI systems that do slow, error-prone work. Current focus: supplier price files for distributors. Based in West Hartford, CT.">
-  <meta property="og:title" content="Decanlys | Connor, AI consulting">
-  <meta property="og:description" content="AI adoption people trust, and AI systems that do slow, error-prone work. Current focus: supplier price files for distributors.">
+  <title>Decanlys | Supplier price files for distributors</title>
+  <meta name="description" content="Forward a supplier's price file. Within two business days you get a file ready to load, a short list of items that need your decision, and a report on cost increases you have not passed on. From Connor at Decanlys, West Hartford, CT.">
+  <meta property="og:title" content="Decanlys | Supplier price files for distributors">
+  <meta property="og:description" content="Every supplier price increase, in your system within two business days. From Connor at Decanlys.">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +55,7 @@
     a { color: inherit; text-decoration: none; }
     button { font-family: inherit; border: none; background: none; cursor: pointer; }
 
-    section {
+    section, #capabilities {
       scroll-margin-top: 80px;
     }
 
@@ -307,15 +307,68 @@
     }
 
     /* ──────────────────────────────────────────
+       Services bar
+       ────────────────────────────────────────── */
+    .scope-bar {
+      margin-top: var(--nav-h);
+      background: var(--section-bg);
+      border-bottom: 1px solid var(--lavender);
+    }
+    .scope-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+    }
+    .scope-label {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--deep-purple);
+    }
+    .scope-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .scope-list a {
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 4px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--lavender);
+      background: var(--white);
+      transition: color 200ms ease, border-color 200ms ease;
+    }
+    .scope-list a:hover {
+      color: var(--purple);
+      border-color: var(--purple);
+    }
+    .scope-list a.scope-current {
+      background: var(--lavender);
+      border-color: var(--lavender);
+      color: var(--deep-purple);
+    }
+
+    /* ──────────────────────────────────────────
        Hero
        ────────────────────────────────────────── */
     .hero {
-      min-height: 100vh;
+      min-height: calc(100vh - var(--nav-h) - 58px);
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
-      padding: calc(var(--nav-h) + 40px) 24px 80px;
+      padding: 72px 24px 80px;
       overflow: hidden;
     }
 
@@ -583,6 +636,9 @@
     .journey {
       padding: 100px 0;
     }
+    .journey.band-alt {
+      background: var(--section-bg);
+    }
 
     .journey-stages {
       max-width: 720px;
@@ -718,7 +774,7 @@
        About
        ────────────────────────────────────────── */
     .about {
-      background: var(--section-bg);
+      background: var(--white);
       padding: 100px 0;
     }
 
@@ -932,9 +988,16 @@
       }
 
       .hero {
-        padding-top: calc(var(--nav-h) + 32px);
+        padding-top: 48px;
         padding-bottom: 60px;
-        min-height: 100vh;
+        min-height: auto;
+      }
+      .scope-inner {
+        padding: 12px 16px;
+      }
+      .scope-list a {
+        font-size: 14px;
+        padding: 4px 12px;
       }
       .hero h1 {
         font-size: 32px;
@@ -1105,11 +1168,11 @@
 
       <div class="nav-right">
         <ul class="nav-links">
-          <li><a href="#price-files">Price files</a></li>
-          <li><a href="#playbook">Playbook</a></li>
+          <li><a href="#how">Price files</a></li>
+          <li><a href="#playbook">AI adoption</a></li>
           <li><a href="#about">About</a></li>
         </ul>
-        <a href="#contact" class="btn btn-nav">Book a Call</a>
+        <a href="#free-report" class="btn btn-nav">Free report</a>
       </div>
 
       <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -1120,18 +1183,29 @@
     </div>
 
     <ul class="nav-mobile" aria-hidden="true">
-      <li><a href="#price-files">Price files</a></li>
-      <li><a href="#playbook">Playbook</a></li>
+      <li><a href="#how">Price files</a></li>
+      <li><a href="#playbook">AI adoption</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#contact" class="btn">Book a Call</a></li>
+      <li><a href="#free-report" class="btn">Free report</a></li>
     </ul>
   </nav>
 
   <main id="main">
 
-    <!-- ─── Hero ─── -->
+    <!-- ─── Services bar: the full scope, before the featured offer ─── -->
+    <div class="scope-bar">
+      <div class="scope-inner">
+        <span class="scope-label">AI consulting</span>
+        <ul class="scope-list">
+          <li><a href="#hero" class="scope-current" aria-current="true">Price files for distributors</a></li>
+          <li><a href="#playbook">AI adoption for teams</a></li>
+          <li><a href="#capabilities">Custom AI tools</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ─── Hero: the price file service ─── -->
     <section class="hero" id="hero">
-      <!-- Watermark: expanded node network, very subtle -->
       <svg class="hero-watermark" viewBox="0 0 400 400" fill="none" aria-hidden="true">
         <line x1="80" y1="60" x2="80" y2="160" stroke="#e1d5e7" stroke-width="2.5"/>
         <line x1="80" y1="160" x2="80" y2="260" stroke="#e1d5e7" stroke-width="2.5"/>
@@ -1161,27 +1235,22 @@
       </svg>
 
       <div class="hero-content">
-        <span class="section-label">AI Consulting</span>
-        <h1>Your business runs on people. I help them work smarter.</h1>
-        <p class="hero-sub">I help organizations adopt AI in a way their people trust, and I build AI systems that do slow, error-prone work. My current focus is supplier price files for distributors.</p>
+        <span class="section-label">Featured service · Price files for distributors</span>
+        <h1>Every supplier price increase, in your system within two business days.</h1>
+        <p class="hero-sub">Forward me a supplier's price file. You get back a file ready to load, a short list of items that need your decision, and a one-page report on what old costs are costing you.</p>
         <div class="hero-actions">
-          <a href="#price-files" class="btn">See the price file service</a>
-          <a href="#contact" class="btn btn-outline">Let's Talk</a>
+          <a href="#free-report" class="btn">Get a free report</a>
+          <a href="#sample" class="btn btn-outline">See a sample</a>
         </div>
         <p class="trust-line">Based in West Hartford, CT</p>
       </div>
     </section>
 
-    <!-- ─── Current focus: price files ─── -->
-    <section id="price-files">
-
-    <div class="band band-alt">
+    <!-- ─── The problem ─── -->
+    <section class="band band-alt" id="problem">
       <div class="container">
-        <span class="section-label reveal">Current focus: price files for distributors</span>
-        <h2 class="section-heading reveal">Every supplier price increase, in your system within two business days.</h2>
-        <p class="section-intro reveal">Forward me a supplier's price file. You get back a file ready to load, a short list of items that need your decision, and a one-page report on what old costs are costing you.</p>
-
-        <h3 class="sub-heading reveal" style="margin-top:0">You pay the new cost before your system knows it.</h3>
+        <span class="section-label reveal">The problem</span>
+        <h2 class="section-heading reveal">You pay the new cost before your system knows it.</h2>
         <p class="section-intro reveal">Suppliers send price increases as PDFs and spreadsheets, often more than once a year. Someone has to match every part number and key every new cost. Until that is done, your invoices carry the new cost while your quotes and margin reports use the old one.</p>
 
         <div class="grid grid-3">
@@ -1199,10 +1268,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- ─── How it works ─── -->
-    <div class="band" id="how">
+    <section class="band" id="how">
       <div class="container">
         <span class="section-label reveal">How it works</span>
         <h2 class="section-heading reveal">You forward one email. I handle the rest.</h2>
@@ -1231,10 +1300,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- ─── What you get ─── -->
-    <div class="band band-alt" id="offer">
+    <section class="band band-alt" id="offer">
       <div class="container">
         <span class="section-label reveal">What you get</span>
         <h2 class="section-heading reveal">More than a loaded file.</h2>
@@ -1287,10 +1356,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- ─── Sample ─── -->
-    <div class="band" id="sample">
+    <section class="band" id="sample">
       <div class="container">
         <span class="section-label reveal">Sample report</span>
         <h2 class="section-heading reveal">See it run on a real price file.</h2>
@@ -1322,10 +1391,10 @@
           <a href="samples/decanlys-sample-price-file-workbook.xlsx" class="btn btn-outline">Workbook (Excel)</a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- ─── Your data ─── -->
-    <div class="band band-alt" id="data">
+    <!-- ─── Your data and the free report ─── -->
+    <section class="band band-alt" id="free-report">
       <div class="container">
         <span class="section-label reveal">Your data</span>
         <h2 class="section-heading reveal">Your files stay yours.</h2>
@@ -1344,9 +1413,15 @@
           <p class="contact-email">Need an NDA first? Send it to <a href="mailto:info@decanlys.com">info@decanlys.com</a> and I'll sign it.</p>
           <p class="contact-capacity">I take six distributors, and only one per product line in each metro area.</p>
         </div>
-      </div>
-    </div>
 
+        <div class="cta-block reveal">
+          <h3>Get a free Missed Increase Report.</h3>
+          <p>Send one supplier's price file and your item export for that supplier: part number, cost and units sold in the last 90 days. Within two business days you get the owner report and the workbook. No cost, no obligation.</p>
+          <a href="mailto:info@decanlys.com?subject=Missed%20Increase%20Report" class="btn">Request a free report</a>
+          <p class="contact-email">Need an NDA first? Send it to <a href="mailto:info@decanlys.com">info@decanlys.com</a> and I'll sign it.</p>
+          <p class="contact-capacity">I take six distributors, and only one per product line in each metro area.</p>
+        </div>
+      </div>
     </section>
 
     <div class="section-divider" aria-hidden="true">
@@ -1360,8 +1435,28 @@
       </svg>
     </div>
 
+    <!-- ─── About me: the second header ─── -->
+    <section class="about" id="about">
+      <div class="container">
+        <span class="section-label reveal">About me</span>
+        <h2 class="section-heading reveal">I also help organizations adopt AI.</h2>
+
+        <div class="about-content reveal">
+          <div class="about-photo">
+            <img src="Connor.jpg" alt="Connor, founder of Decanlys" class="photo-headshot" width="200" height="200">
+            <p class="photo-caption">Connor — Founder, Decanlys</p>
+          </div>
+          <div class="about-text">
+            <p>I'm Connor, the founder of Decanlys. I built this consultancy on a simple idea: AI should work for people, not the other way around.</p>
+            <p>My background is in data science and AI engineering, and I've spent years leading AI adoption for large organizations. But the work I care most about is helping businesses understand what AI can actually do for them — without the jargon, without the hype, and without the pressure to adopt technology for its own sake.</p>
+            <p>The price file service is one example of that work. Beyond it, I help teams bring AI into how they work, one step at a time. Here is how I do it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ─── The Playbook ─── -->
-    <section class="journey" id="playbook">
+    <section class="journey band-alt" id="playbook">
       <div class="container">
         <span class="section-label reveal">The Playbook</span>
         <h2 class="section-heading reveal">From AI-unsure to AI-native.</h2>
@@ -1413,7 +1508,7 @@
           <p class="journey-arc-label reveal">AI-Native</p>
         </div>
 
-        <div class="journey-capabilities reveal">
+        <div class="journey-capabilities reveal" id="capabilities">
           <p class="journey-capabilities-heading">What gets built along the way</p>
           <div class="capabilities-grid">
             <div class="capability-item">
@@ -1435,32 +1530,9 @@
       </div>
     </section>
 
-
-    <!-- ─── About ─── -->
-    <section class="about" id="about">
-      <div class="container">
-        <span class="section-label reveal">Who I Am</span>
-        <h2 class="section-heading reveal">People first. Technology second.</h2>
-
-        <div class="about-content reveal">
-          <div class="about-photo">
-            <img src="Connor.jpg" alt="Connor, founder of Decanlys" class="photo-headshot" width="200" height="200">
-            <p class="photo-caption">Connor — Founder, Decanlys</p>
-          </div>
-          <div class="about-text">
-            <p>I'm Connor, the founder of Decanlys. I built this consultancy on a simple idea: AI should work for people, not the other way around.</p>
-            <p>My background is in data science and AI engineering, and I've spent years leading AI adoption for large organizations. But the work I care most about is helping businesses understand what AI can actually do for them — without the jargon, without the hype, and without the pressure to adopt technology for its own sake.</p>
-            <p>My current focus is one problem: supplier price files for distributors. It is slow, error-prone work that a well-built AI system can do in minutes, with a person checking every exception. <a href="#price-files">See how it works.</a></p>
-            <p>I believe the best technology is the kind you barely notice because it just works. That's what I build.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── Contact / CTA ─── -->
+    <!-- ─── Contact: general AI work ─── -->
     <section class="contact" id="contact">
       <div class="container">
-        <!-- Node cluster decoration -->
         <svg class="contact-node" viewBox="0 0 60 52" width="60" height="52" fill="none" aria-hidden="true">
           <line x1="30" y1="8" x2="10" y2="26" stroke="#e1d5e7" stroke-width="2" stroke-linecap="round"/>
           <line x1="30" y1="8" x2="50" y2="26" stroke="#e1d5e7" stroke-width="2" stroke-linecap="round"/>
