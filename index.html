@@ -307,68 +307,15 @@
     }
 
     /* ──────────────────────────────────────────
-       Services bar
-       ────────────────────────────────────────── */
-    .scope-bar {
-      margin-top: var(--nav-h);
-      background: var(--section-bg);
-      border-bottom: 1px solid var(--lavender);
-    }
-    .scope-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 12px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px 20px;
-    }
-    .scope-label {
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--deep-purple);
-    }
-    .scope-list {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-    }
-    .scope-list a {
-      display: inline-block;
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--text);
-      padding: 4px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--lavender);
-      background: var(--white);
-      transition: color 200ms ease, border-color 200ms ease;
-    }
-    .scope-list a:hover {
-      color: var(--purple);
-      border-color: var(--purple);
-    }
-    .scope-list a.scope-current {
-      background: var(--lavender);
-      border-color: var(--lavender);
-      color: var(--deep-purple);
-    }
-
-    /* ──────────────────────────────────────────
        Hero
        ────────────────────────────────────────── */
     .hero {
-      min-height: calc(100vh - var(--nav-h) - 58px);
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
-      padding: 72px 24px 80px;
+      padding: calc(var(--nav-h) + 40px) 24px 80px;
       overflow: hidden;
     }
 
@@ -988,17 +935,11 @@
       }
 
       .hero {
-        padding-top: 48px;
+        padding-top: calc(var(--nav-h) + 32px);
         padding-bottom: 60px;
         min-height: auto;
       }
-      .scope-inner {
-        padding: 12px 16px;
-      }
-      .scope-list a {
-        font-size: 14px;
-        padding: 4px 12px;
-      }
+
       .hero h1 {
         font-size: 32px;
       }
@@ -1191,18 +1132,6 @@
   </nav>
 
   <main id="main">
-
-    <!-- ─── Services bar: the full scope, before the featured offer ─── -->
-    <div class="scope-bar">
-      <div class="scope-inner">
-        <span class="scope-label">AI consulting</span>
-        <ul class="scope-list">
-          <li><a href="#hero" class="scope-current" aria-current="true">Price files for distributors</a></li>
-          <li><a href="#playbook">AI adoption for teams</a></li>
-          <li><a href="#capabilities">Custom AI tools</a></li>
-        </ul>
-      </div>
-    </div>
 
     <!-- ─── Hero: the price file service ─── -->
     <section class="hero" id="hero">
@@ -1405,14 +1334,6 @@
           <li>I never log in to your ERP. You load the file yourself.</li>
           <li>I delete your files when you ask, and when our work ends.</li>
         </ul>
-
-        <div class="cta-block reveal">
-          <h3>Get a free Missed Increase Report.</h3>
-          <p>Send one supplier's price file and your item export for that supplier: part number, cost and units sold in the last 90 days. Within two business days you get the owner report and the workbook. No cost, no obligation.</p>
-          <a href="mailto:info@decanlys.com?subject=Missed%20Increase%20Report" class="btn">Request a free report</a>
-          <p class="contact-email">Need an NDA first? Send it to <a href="mailto:info@decanlys.com">info@decanlys.com</a> and I'll sign it.</p>
-          <p class="contact-capacity">I take six distributors, and only one per product line in each metro area.</p>
-        </div>
 
         <div class="cta-block reveal">
           <h3>Get a free Missed Increase Report.</h3>
